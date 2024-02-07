@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('lists', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('list_title');
+            $table->string('desc_title')->nullable();
+            $table->foreignId('user_id')->constrained('users');
+            $table->enum('status', ['completed', 'incomplete'])->default('incomplete');
+            $table->foreignId('collaborate')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('lists');
     }
 };

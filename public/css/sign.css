@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+:root {
+    --bg-color: #064e52;
+    --bg-color-darker: #002b33;
+    --wave: #52868d;
+    --seafoam: #c4dfe6;
+    --success: #4b7447;
+    --error: #744747;
+}
+body {
+    background: var(--bg-color-darker);
+    background: linear-gradient(
+        180deg,
+        var(--bg-color-darker) 0%,
+        var(--bg-color) 50%,
+        var(--wave) 100%
+    );
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section .container {
+    padding: 2px;
+}
+section .container .top {
+    text-align: center;
+}
+section .container .top h1 {
+    font-size: 2.8rem;
+    font-weight: 100;
+    /* line-height: 1px; */
+    margin-bottom: -5px;
+    color: #fff;
+}
+section .container .mid {
+    background-color: var(--bg-color-darker);
+    padding: 35px;
+    width: 380px;
+}
+section .container .mid .inputan {
+    display: flex;
+    flex-direction: column;
+}
+section .container .mid .inputan .inputs {
+    display: flex;
+    align-items: center;
+    background-color: var(--seafoam);
+    padding: 8px;
+    margin-bottom: 30px;
+}
+section .container .mid .inputan i {
+    margin-right: 10px;
+    font-size: 1.7rem;
+    padding: 8px;
+    color: var(--bg-color-darker);
+}
+section .container .mid .inputan input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+section .container .mid button {
+    background-color: var(--wave);
+    border: none;
+    padding: 8px;
+    height: 50px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+section .container .mid button:hover {
+    background-color: #406b70;
+}
+section .container .bottom button {
+    width: 100%;
+    padding: 8px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: var(--bg-color-darker);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+}
+section .container .bottom button:hover {
+    background-color: #004b58;
+}
+section .container .alert-suc {
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--success);
+}
+section .container .alert-suc h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--seafoam);
+    letter-spacing: 2px;
+}
+section .container .alert-err {
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--error);
+}
+section .container .alert-err h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--seafoam);
+    letter-spacing: 2px;
+}
